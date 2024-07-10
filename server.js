@@ -2,7 +2,7 @@ const UDP = require('dgram')
 
 const server = UDP.createSocket('udp4')
 
-const port = 3000
+const port = process.env.PORT
 
 server.on('listening', () => {
   // Server address it’s using to listen
