@@ -1,0 +1,19 @@
+environment:
+  - PORT=3000
+services:
+  web:
+    domain: ${HOST}
+    build: .
+    port: 3000
+    ports: 
+      - 3001
+      - 3002
+balancers:
+  ingress:
+    annotations:
+    - test.annotation.org/udp=truebar
+    service: web
+    ports:
+      5000:
+        protocol: UDP
+        port: 3000
