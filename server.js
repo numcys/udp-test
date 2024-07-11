@@ -4,6 +4,7 @@ const http = require('http');
 const server = UDP.createSocket('udp4')
 
 const port = process.env.PORT
+const portudp = 3001
 
 server.on('listening', () => {
   // Server address it’s using to listen
@@ -29,13 +30,12 @@ server.on('message', (message, info) => {
   })
 })
 
-server.bind(port)
+server.bind(portudp)
 
 const servera = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello World!\nI\'m: ' + process.env.APP + '\nBuild:' + process.env.BUILD + '\nRelease: ' + process.env.RELEASE + '\nrunning on: ' + process.env.RACK);
-  console.log('PING');
 });
 
 servera.listen(port, () => {
