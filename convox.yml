@@ -15,4 +15,4 @@ balancers:
     ports:
       5000:
         protocol: UDP
-        port: 3000
+        port: 3001
