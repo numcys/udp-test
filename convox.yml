@@ -5,6 +5,8 @@ services:
     domain: ${HOST}
     build: .
     port: 3000
+    ports:
+      - 3001
 balancers:
   ingress:
     annotations:
@@ -12,5 +14,5 @@ balancers:
     service: web
     ports:
       5000:
-        protocol: TCP
+        protocol: UDP
         port: 3000
