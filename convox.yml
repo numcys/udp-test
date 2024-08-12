@@ -5,14 +5,4 @@ services:
     domain: ${HOST}
     build: .
     port: 3000
-    ports:
-      - 3001/udp
-balancers:
-  ingress:
-    annotations:
-    - test.annotation.org/foo=bar
-    service: web
-    ports:
-      5000:
-        protocol: UDP
-        port: 3001
+
