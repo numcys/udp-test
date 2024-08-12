@@ -7,3 +7,10 @@ services:
     port: 3000
     ports:
       - 3001/udp
+balancers:
+  ingress:
+    annotations:
+    - test.annotation.org/foo=bar
+    service: web
+    ports:
+      5000: 3000
