@@ -1,12 +1,12 @@
 environment:
   - PORT=3000
 resources:
-	database:
-	  type: postgres
-	  options:
-		  storage: 10
-	queue:
-	  type: redis
+  database:
+    type: postgres
+	options:
+	  storage: 10
+  queue:
+    type: redis
 services:
   web:
     domain: ${HOST}
