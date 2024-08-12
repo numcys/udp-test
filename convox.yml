@@ -4,7 +4,7 @@ resources:
 	database:
 	  type: postgres
 	  options:
-		  storage: 200
+		  storage: 10
 	queue:
 	  type: redis
 services:
