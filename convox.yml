@@ -11,7 +11,7 @@ resources:
       version: 13
   db2:
     type: postgres
-    image: pgvector/pgvector:latest
+    image: pgvector/pgvector:pg16
     options:
       version: 13
   memcached:
