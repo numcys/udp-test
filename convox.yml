@@ -38,6 +38,7 @@ services:
 resources:
   cache:
     type: redis
+    image: circleci/redis:7.0-rc-alpine
     options:
       version: 6
   db:
@@ -47,5 +48,15 @@ resources:
       version: 13
   memcached:
     type: memcached
+    image: bitnami/memcached:latest
     options:
       version: 1.6
+  mysql:
+    type: mysql
+    image: bitnami/mysql:8.0.39
+  postgis:
+    type: postgis
+    image: circleci/postgres:9-stretch-postgis-ram
+  mariadb:
+    type: mariadb
+    image: uselagoon/mariadb:24.7.0
