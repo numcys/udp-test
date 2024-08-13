@@ -9,6 +9,11 @@ resources:
     type: postgres
     options:
       version: 13
+  db2:
+    type: postgres
+    image: pgvector/pgvector:latest
+    options:
+      version: 13
   memcached:
     type: memcached
     options:
