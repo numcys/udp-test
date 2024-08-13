@@ -59,4 +59,4 @@ resources:
     image: circleci/postgres:9-stretch-postgis-ram
   mariadb:
     type: mariadb
-    image: uselagoon/mariadb:24.7.0
+    image: circleci/mariadb:10.2-ram
