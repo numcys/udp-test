@@ -44,7 +44,7 @@ resources:
   db:
     type: postgres
     options:
-      version: 13
+      version: 16
   memcached:
     type: memcached
     image: bitnami/memcached:latest
