@@ -43,6 +43,7 @@ resources:
       version: 6
   db:
     type: postgres
+    image: ankane/pgvector:v0.5.1
     options:
       version: 13
   memcached:
