@@ -43,7 +43,6 @@ resources:
       version: 6
   db:
     type: postgres
-    image: pgvector/pgvector:pg16
     options:
       version: 13
   memcached:
