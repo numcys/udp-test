@@ -44,7 +44,7 @@ resources:
   db:
     type: postgres
     options:
-      version: 16
+      version: 13
   memcached:
     type: memcached
     image: bitnami/memcached:latest
@@ -58,4 +58,3 @@ resources:
     image: circleci/postgres:9-stretch-postgis-ram
   mariadb:
     type: mariadb
-    image: circleci/mariadb:10.2-ram
